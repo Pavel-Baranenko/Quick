@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Quick</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <a href="#" class="header__logo">
+            <img src="images/logo.png" alt="">
+          </a>
+          <div class="header__search">
+            <input type="text" placeholder="Поиск услуг" class="header__search-input">
+            <buttom class="search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                  stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </buttom>
+          </div>
+          <div class="heder__right">
+            <button class="new__offer">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M6.99996 2.91663V11.0833M2.91663 6.99996H11.0833" stroke="#38B000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <i>Новая услуга </i>
+              </span>
+            </button>
+            <div class="header__buttons ">
+
+              <button class="message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7.99962 9.5H11.9996M7.99962 13H14.9996M12.4996 20C17.194 20 20.9996 16.1944 20.9996 11.5C20.9996 6.80558 17.194 3 12.4996 3C7.8052 3 3.99962 6.80558 3.99962 11.5C3.99962 12.45 4.15547 13.3636 4.443 14.2166C4.55119 14.5376 4.60529 14.6981 4.61505 14.8214C4.62469 14.9432 4.6174 15.0286 4.58728 15.1469C4.55677 15.2668 4.48942 15.3915 4.35472 15.6408L2.71906 18.6684C2.48575 19.1002 2.36909 19.3161 2.3952 19.4828C2.41794 19.6279 2.50337 19.7557 2.6288 19.8322C2.7728 19.9201 3.01692 19.8948 3.50517 19.8444L8.62619 19.315C8.78127 19.299 8.85881 19.291 8.92949 19.2937C8.999 19.2963 9.04807 19.3029 9.11586 19.3185C9.18478 19.3344 9.27145 19.3678 9.44478 19.4345C10.3928 19.7998 11.4228 20 12.4996 20Z"
+                    stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="bell">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M14.391 18.015C14.8198 19.6154 13.8701 21.2604 12.2697 21.6893C10.6693 22.1181 9.02426 21.1683 8.59543 19.5679M10.8915 5.74109C11.1957 5.19379 11.2959 4.53229 11.1211 3.8797C10.7637 2.54603 9.39288 1.75457 8.05921 2.11193C6.72555 2.46928 5.93409 3.84013 6.29144 5.17379C6.46631 5.82639 6.88384 6.34916 7.42094 6.67103M16.2359 9.44553C15.879 8.1134 14.926 6.99944 13.5868 6.3487C12.2475 5.69797 10.6316 5.56377 9.09449 5.97563C7.55741 6.38749 6.22508 7.31167 5.3906 8.54486C4.55612 9.77805 4.28785 11.2192 4.64479 12.5514C5.23537 14.7554 5.12069 16.5138 4.74774 17.8499C4.32267 19.3728 4.11014 20.1342 4.16756 20.2871C4.23325 20.462 4.28076 20.5101 4.455 20.5776C4.60729 20.6366 5.24706 20.4651 6.5266 20.1223L18.3917 16.9431C19.6712 16.6002 20.311 16.4288 20.4134 16.3015C20.5305 16.1559 20.5476 16.0906 20.5171 15.9063C20.4904 15.7451 19.9256 15.192 18.796 14.0857C17.805 13.115 16.8265 11.6496 16.2359 9.44553Z"
+                    stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26" fill="none">
+                  <path
+                    d="M2 2.14636H3.30616C3.55218 2.14636 3.67519 2.14636 3.77418 2.19491C3.86142 2.2377 3.93535 2.30651 3.98715 2.39315C4.04593 2.49144 4.06333 2.62214 4.09812 2.88351L4.57143 6.43921M4.57143 6.43921L5.62332 14.7366C5.75681 15.7896 5.82355 16.3161 6.0581 16.7123C6.26478 17.0615 6.56108 17.3392 6.91135 17.512C7.30886 17.7079 7.80394 17.7079 8.79411 17.7079H17.352C18.2945 17.7079 18.7658 17.7079 19.151 17.5259C19.4905 17.3655 19.7818 17.1067 19.9923 16.7787C20.2309 16.4068 20.3191 15.91 20.4955 14.9163L21.8191 7.45842C21.8812 7.10869 21.9122 6.93382 21.8672 6.79712C21.8278 6.67721 21.7499 6.57623 21.6475 6.51221C21.5308 6.43921 21.365 6.43921 21.0332 6.43921H4.57143ZM10 22.5374C10 23.1301 9.55228 23.6106 9 23.6106C8.44772 23.6106 8 23.1301 8 22.5374C8 21.9446 8.44772 21.4642 9 21.4642C9.55228 21.4642 10 21.9446 10 22.5374ZM18 22.5374C18 23.1301 17.5523 23.6106 17 23.6106C16.4477 23.6106 16 23.1301 16 22.5374C16 21.9446 16.4477 21.4642 17 21.4642C17.5523 21.4642 18 21.9446 18 22.5374Z"
+                    stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="header__balance">25 800₽</div>
+            <div class="header__user">
+              <div class="header__user-avatar">
+                <img src="images/user-header.png" alt="">
+                <div class="header__user-info">
+                  <div class="header__user-name">Жорж М</div>
+                  <div class="header__user-status">Исполнитель</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="header__bottom">
+          <a class="header__bottom-item">
+            <img src="images/icons/palette.svg" alt="">
+            <span>Graphics</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/brackets-slash.3 1.svg" alt="">
+            <span>Development & IT</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/type-02.3 1.svg" alt="">
+            <span>Texts & translations</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/notification-text.svg" alt="">
+            <span>Marketing & advertising</span>
+          </a>
+
+          <a class="header__bottom-item">
+            <img src="images/icons/bar-line-chart.svg" alt="">
+            <span>SEO & traffic</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/music-note.svg" alt="">
+            <span>Audio & video</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/diamond.svg" alt="">
+            <span>Business</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/sun-setting.svg" alt="">
+            <span>Lifestyle</span>
+          </a>
+
+        </div>
+        <div class="header__bottom"></div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="page__top">
+        <div class="container">
+          <div class="page__breadcrumbs">
+            <a href="index.html" class="page__breadcrumbs-home page__breadcrumbs-link">
+              <img src="images/icons/home-03 1.svg" alt="">
+            </a>
+            <a href="" class="page__breadcrumbs-category page__breadcrumbs-link">Дизайн</a>
+            <a href="" class="page__breadcrumbs-midle page__breadcrumbs-link">Веб и мобильный дизайн</a>
+            <a href="" class="page__breadcrumbs-last page__breadcrumbs-link">Веб дизайн</a>
+          </div>
+          <div class="page__heading">
+            <h2>Уникальный дизайн сайта</h2> <span>12 867 offers</span>
+          </div>
+          <div class="page__categories">
+            <div class="page__categories-box">
+              <a href="">Сайт целиком</a>
+              <a href="">Лендинг</a>
+              <a href="">Страница</a>
+              <a href="">Элемент сайта</a>
+              <a href="">Шапка</a>
+              <a href="">Мобильный дизайн</a>
+              <a href="" class="page__categories-select">Еще</a>
+            </div>
+            <div class="page__categories__left">
+              <a href="" class="page__categories-select">Рекомендуемые</a>
+              <button>
+                <img src="images/icons/list.svg" alt="">
+              </button>
+              <button>
+                <img src="images/icons/grid.svg" alt="">
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+      <section class="content">
+        <div class="container">
+          <div class="content__wrapper">
+            <div class="content__filter">
+              <div class="content__filter__top">
+                <a class="content__filter-heading">
+                  Графика
+                </a>
+                <div class="content__filter-body">
+                  <a href="#" class="content__filter-body-head">Веб дизайн</a>
+                  <ul class="content__filter-list">
+                    <a href="">
+                      <li>Сайт целиком</li>
+                    </a>
+                    <a href="">
+                      <li>Лендинг</li>
+                    </a>
+                    <a href="">
+                      <li>Страница</li>
+                    </a>
+                    <a href="">
+                      <li>Элемент сайта</li>
+                    </a>
+                    <a href="">
+                      <li>Шапка сайта</li>
+                    </a>
+                    <a href="">
+                      <li>Мобильный дизайн</li>
+                    </a>
+                    <a href="">
+                      <li>E-mail дизайн</li>
+                    </a>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="filter__options">
+                <div class="filter__options__top">
+                  <div class="filter__options__tilte">Фильтры</div>
+                  <button class="filter__reset-btn">Сбросить все</button>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top">
+                    <img src="images/icons/message-smile-circle.svg" alt="">
+                    <span>Язык исполнителя</span>
+                  </div>
+                  <div class="filter__select">Любой</div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top">
+                    <img src="images/icons/flag.svg" alt="">
+                    <span>Страна исполнителя</span>
+                  </div>
+                  <div class="filter__select">Любая</div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top">
+                    <img src="images/icons/star-01.3 2.svg" alt="">
+                    <span>Исполнитель</span>
+                  </div>
+                  <div class="filter__points">
+                    <div class="filter__points-item">Новичок или выше</div>
+                    <div class="filter__points-item active">Продвинутый или выше</div>
+                    <div class="filter__points-item">Профессионал</div>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top">
+                    <img src="images/icons/star-01.3 2.svg" alt="">
+                    <span>Исполнитель</span>
+                  </div>
+                  <div class="filter__points">
+                    <div class="filter__points-item">до 500₽</div>
+                    <div class="filter__points-item">до 2 000₽</div>
+                    <div class="filter__points-item">до 4 000₽</div>
+                    <div class="filter__points-item">до 8 000₽</div>
+                    <div class="filter__points-item">до 12 000₽</div>
+                  </div>
+                  <div class="filter__points filter__points-price">
+                    <input type="number" class="filter__points-input" placeholder="От, ₽">
+                    <input type="number" class="filter__points-input" placeholder="До, ₽">
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top">
+                    <img src="images/icons/message-text-circle-02.3 1.svg" alt="">
+                    <span>Отзывы</span>
+                    <button class="filter__cloose">Скрыть</button>
+                  </div>
+                  <div class="filter__points">
+                    <div class="filter__points-item">От 1</div>
+                    <div class="filter__points-item">От 5</div>
+                    <div class="filter__points-item">От 20</div>
+                    <div class="filter__points-item">100 и больше</div>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top grey">
+                    <img src="images/icons/lightning-01.3 1.svg" alt="">
+                    <span>Активность</span>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top">
+                    <img src="images/icons/alarm-clock.3 1.svg" alt="">
+                    <span>Срок исполнения</span>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top">
+                    <img src="images/icons/git-branch-01.3 1.svg" alt="">
+                    <span>Заказов в очереди</span>
+                    <button class="filter__item-show">Показать</button>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top grey">
+                    <img src="images/icons/eye.3 1.svg" alt="">
+                    <span>Просмотренные</span>
+                  </div>
+                </div>
+                <div class="filter__item">
+                  <div class="filter__item-top grey">
+                    <img src="images/icons/shopping-cart-01 1.svg" alt="">
+                    <span>Заказанные</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content__profi">
+              <div class="content__profi-wrap">
+                <div class="profi__block">
+                  <div class="profi__head">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                    <div class="profi__info">
+                      <div class="profi__info-top">
+                        <div class="profi__info-user">
+                          <div class="profi__info-name">Жорж Милославский</div>
+                          <div class="profi__info-orders">В очереди 2 заказа</div>
+                        </div>
+                        <div class="profi__info-status">Онлайн</div>
+                      </div>
+                      <div class="profi__info-bottom">
+                        <div class="profi__info-point">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                            fill="none">
+                            <path opacity="0.12"
+                              d="M10.3724 3.52163C10.574 3.11306 10.6748 2.90877 10.8117 2.84349C10.9308 2.78671 11.0692 2.78671 11.1883 2.84349C11.3252 2.90877 11.426 3.11306 11.6277 3.52163L13.5411 7.39784C13.6006 7.51846 13.6303 7.57878 13.6738 7.62561C13.7124 7.66706 13.7586 7.70065 13.8099 7.72452C13.8679 7.75147 13.9344 7.7612 14.0675 7.78065L18.3474 8.40622C18.7981 8.47209 19.0234 8.50502 19.1277 8.61511C19.2184 8.71088 19.261 8.84248 19.2438 8.97327C19.2239 9.12361 19.0609 9.28252 18.7346 9.60032L15.6387 12.6156C15.5423 12.7095 15.494 12.7566 15.4629 12.8125C15.4353 12.862 15.4176 12.9164 15.4108 12.9727C15.4031 13.0362 15.4145 13.1026 15.4372 13.2353L16.1678 17.4943C16.2448 17.9435 16.2832 18.1681 16.2109 18.3014C16.1479 18.4173 16.036 18.4987 15.9062 18.5228C15.757 18.5504 15.5553 18.4443 15.152 18.2322L11.3259 16.22C11.2066 16.1574 11.147 16.1261 11.0842 16.1137C11.0286 16.1028 10.9714 16.1028 10.9158 16.1137C10.853 16.1261 10.7934 16.1574 10.6742 16.22L6.84806 18.2322C6.44468 18.4443 6.24298 18.5504 6.09385 18.5228C5.9641 18.4987 5.85213 18.4173 5.78915 18.3014C5.71675 18.1681 5.75528 17.9435 5.83231 17.4943L6.56278 13.2353C6.58555 13.1026 6.59694 13.0362 6.58923 12.9727C6.58241 12.9164 6.56472 12.862 6.53716 12.8125C6.50602 12.7566 6.45777 12.7095 6.36127 12.6156L3.26549 9.60032C2.9392 9.28252 2.77606 9.12361 2.75621 8.97327C2.73894 8.84248 2.78161 8.71088 2.87234 8.61511C2.97664 8.50502 3.20197 8.47209 3.65266 8.40622L7.93252 7.78065C8.06562 7.7612 8.13217 7.75147 8.19013 7.72452C8.24144 7.70065 8.28764 7.66706 8.32617 7.62561C8.36967 7.57878 8.39944 7.51846 8.45897 7.39784L10.3724 3.52163Z"
+                              fill="#E76F51" />
+                            <path
+                              d="M10.3724 3.52163C10.574 3.11306 10.6749 2.90877 10.8117 2.84349C10.9308 2.78671 11.0692 2.78671 11.1883 2.84349C11.3252 2.90877 11.426 3.11306 11.6277 3.52163L13.5411 7.39784C13.6006 7.51846 13.6303 7.57878 13.6738 7.62561C13.7124 7.66706 13.7586 7.70065 13.8099 7.72452C13.8679 7.75147 13.9344 7.7612 14.0675 7.78065L18.3474 8.40622C18.7981 8.47209 19.0234 8.50502 19.1277 8.61511C19.2184 8.71088 19.261 8.84249 19.2438 8.97327C19.2239 9.12361 19.0609 9.28252 18.7346 9.60032L15.6387 12.6156C15.5423 12.7095 15.494 12.7566 15.4629 12.8125C15.4353 12.862 15.4176 12.9164 15.4108 12.9727C15.4031 13.0362 15.4145 13.1026 15.4372 13.2353L16.1678 17.4943C16.2448 17.9435 16.2832 18.1681 16.2109 18.3014C16.1479 18.4173 16.036 18.4987 15.9062 18.5228C15.757 18.5504 15.5553 18.4443 15.152 18.2322L11.3259 16.22C11.2066 16.1574 11.147 16.1261 11.0842 16.1137C11.0286 16.1028 10.9714 16.1028 10.9158 16.1137C10.853 16.1261 10.7934 16.1574 10.6742 16.22L6.84806 18.2322C6.44468 18.4443 6.24298 18.5504 6.09385 18.5228C5.9641 18.4987 5.85213 18.4173 5.78915 18.3014C5.71675 18.1681 5.75528 17.9435 5.83231 17.4943L6.56278 13.2353C6.58555 13.1026 6.59694 13.0362 6.58923 12.9727C6.58241 12.9164 6.56472 12.862 6.53716 12.8125C6.50602 12.7566 6.45777 12.7095 6.36127 12.6156L3.26549 9.60032C2.9392 9.28252 2.77606 9.12361 2.75621 8.97327C2.73894 8.84249 2.78161 8.71088 2.87234 8.61511C2.97664 8.50502 3.20197 8.47209 3.65266 8.40622L7.93252 7.78065C8.06562 7.7612 8.13217 7.75147 8.19013 7.72452C8.24144 7.70065 8.28764 7.66706 8.32617 7.62561C8.36967 7.57878 8.39944 7.51846 8.45897 7.39784L10.3724 3.52163Z"
+                              stroke="#E76F51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>4.86</span>
+                        </div>
+                        <div class="profi__info-point">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"
+                            fill="none">
+                            <path opacity="0.12"
+                              d="M18.375 11C18.375 15.3493 14.8493 18.875 10.5 18.875C9.45254 18.875 8.45276 18.6705 7.53855 18.2992C7.36358 18.2281 7.2761 18.1926 7.20538 18.1768C7.1362 18.1613 7.08501 18.1556 7.01411 18.1556C6.94164 18.1556 6.8627 18.1687 6.70482 18.195L3.59167 18.7139C3.26566 18.7683 3.10265 18.7954 2.98478 18.7448C2.88162 18.7006 2.79941 18.6184 2.75517 18.5152C2.70461 18.3973 2.73178 18.2343 2.78611 17.9083L3.30497 14.7952C3.33128 14.6373 3.34444 14.5584 3.34443 14.4859C3.34443 14.415 3.33876 14.3638 3.32325 14.2946C3.3074 14.2239 3.27186 14.1364 3.2008 13.9614C2.82952 13.0472 2.625 12.0475 2.625 11C2.625 6.65076 6.15076 3.125 10.5 3.125C14.8493 3.125 18.375 6.65076 18.375 11Z"
+                              fill="#8C13FD" />
+                            <path
+                              d="M7 8.8125H10.5M7 11.875H13.125M10.5 18.875C14.8493 18.875 18.375 15.3493 18.375 11C18.375 6.65076 14.8493 3.125 10.5 3.125C6.15076 3.125 2.625 6.65076 2.625 11C2.625 12.0475 2.82952 13.0472 3.2008 13.9614C3.27186 14.1364 3.3074 14.2239 3.32325 14.2946C3.33876 14.3638 3.34443 14.415 3.34443 14.4859C3.34444 14.5584 3.33128 14.6373 3.30497 14.7952L2.78611 17.9083C2.73178 18.2343 2.70461 18.3973 2.75517 18.5152C2.79941 18.6184 2.88162 18.7006 2.98478 18.7448C3.10265 18.7954 3.26566 18.7683 3.59167 18.7139L6.70482 18.195C6.8627 18.1687 6.94164 18.1556 7.01411 18.1556C7.08501 18.1556 7.1362 18.1613 7.20538 18.1767C7.2761 18.1926 7.36358 18.2281 7.53855 18.2992C8.45276 18.6705 9.45254 18.875 10.5 18.875Z"
+                              stroke="#8C13FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>1 204</span>
+                        </div>
+                        <div class="profi__info-price">
+                          от <strong>1500₽/час</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profi__projects">
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M12 12C14.4853 12 16.5 9.98528 16.5 7.5C16.5 5.01472 14.4853 3 12 3C9.51472 3 7.5 5.01472 7.5 7.5C7.5 9.98528 9.51472 12 12 12Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Исполнитель</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <p>Опыт в вебе свыше 15 лет, Профессионально, качественно подхожу к работе, всегда готов сделать
+                        заказчику приятный бонус.</p>
+                      <a href="">Вся информация</a>
+                    </div>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M21 12C21 16.9706 16.9706 21 12 21C10.8029 21 9.6603 20.7663 8.61549 20.3419C8.41552 20.2607 8.31554 20.2201 8.23472 20.202C8.15566 20.1843 8.09715 20.1778 8.01613 20.1778C7.9333 20.1778 7.84309 20.1928 7.66265 20.2229L4.10476 20.8159C3.73218 20.878 3.54589 20.909 3.41118 20.8512C3.29328 20.8007 3.19933 20.7067 3.14876 20.5888C3.09098 20.4541 3.12203 20.2678 3.18413 19.8952L3.77711 16.3374C3.80718 16.1569 3.82222 16.0667 3.82221 15.9839C3.8222 15.9028 3.81572 15.8443 3.798 15.7653C3.77988 15.6845 3.73927 15.5845 3.65806 15.3845C3.23374 14.3397 3 13.1971 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M8 9.5H12M8 13H15M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.1971 3.23374 14.3397 3.65806 15.3845C3.73927 15.5845 3.77988 15.6845 3.798 15.7653C3.81572 15.8443 3.8222 15.9028 3.82221 15.9839C3.82222 16.0667 3.80718 16.1569 3.77711 16.3374L3.18413 19.8952C3.12203 20.2678 3.09098 20.4541 3.14876 20.5888C3.19933 20.7067 3.29328 20.8007 3.41118 20.8512C3.54589 20.909 3.73218 20.878 4.10476 20.8159L7.66265 20.2229C7.84309 20.1928 7.9333 20.1778 8.01613 20.1778C8.09715 20.1778 8.15566 20.1843 8.23472 20.202C8.31554 20.2201 8.41552 20.2607 8.61549 20.3419C9.6603 20.7663 10.8029 21 12 21Z"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Отзывы</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <div class="profi__descr-right-wrapper">
+                        <p>Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в
+                          бонус
+                          подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!</p>
+                        <div class="profi__descr-testimonial">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="83" height="82" viewBox="0 0 83 82"
+                            fill="none">
+                            <rect opacity="0.15" x="27" width="38" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="22" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" x="27" y="22" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <path opacity="0.15"
+                              d="M54 28C54 26.1362 54 25.2044 54.3045 24.4693C54.7105 23.4892 55.4892 22.7105 56.4693 22.3045C57.2044 22 58.1362 22 60 22H72V34H60C58.1362 34 57.2044 34 56.4693 33.6955C55.4892 33.2895 54.7105 32.5108 54.3045 31.5307C54 30.7956 54 29.8638 54 28Z"
+                              fill="#96A0B5" />
+                            <rect opacity="0.15" x="54" y="44" width="14" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="44" width="50" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="66" width="68" height="12" rx="4" fill="#96A0B5" />
+                          </svg>
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                              fill="none">
+                              <path d="M0.999359 7H13.0827M13.0827 7L9.58269 3.5M13.0827 7L9.58269 10.5" stroke="white"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+
+                      <a href="">Все отзывы (1 204)</a>
+                    </div>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M16.5 13.5C19.5376 13.5 22 12.6046 22 11.5V19C22 20.1046 19.5376 21 16.5 21C13.4624 21 11 20.1046 11 19V11.5C11 12.6046 13.4624 13.5 16.5 13.5Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M13 5C13 6.10457 10.5376 7 7.5 7C4.46243 7 2 6.10457 2 5M13 5C13 3.89543 10.5376 3 7.5 3C4.46243 3 2 3.89543 2 5M13 5V6.5M2 5V17C2 18.1046 4.46243 19 7.5 19M7.5 11C7.33145 11 7.16468 10.9972 7 10.9918C4.19675 10.9 2 10.0433 2 9M7.5 15C4.46243 15 2 14.1046 2 13M22 11.5C22 12.6046 19.5376 13.5 16.5 13.5C13.4624 13.5 11 12.6046 11 11.5M22 11.5C22 10.3954 19.5376 9.5 16.5 9.5C13.4624 9.5 11 10.3954 11 11.5M22 11.5V19C22 20.1046 19.5376 21 16.5 21C13.4624 21 11 20.1046 11 19V11.5M22 15.25C22 16.3546 19.5376 17.25 16.5 17.25C13.4624 17.25 11 16.3546 11 15.25"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Стоимость
+                        услуг</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <div class="profi__descr-service">
+                        <span class="black">Интерфейсы</span>
+                        <p>1500 – 2500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>UI анализ</span>
+                        <p>1500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>UX анализ</span>
+                        <p>1500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>Комплексный анализ</span>
+                        <p>2500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span class="black">Проектирование</span>
+                        <p>1500 – 2500 ₽/ч</p>
+                      </div>
+                      <a href="">Все услуги (21)</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="profi__block">
+                  <div class="profi__head">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                    <div class="profi__info">
+                      <div class="profi__info-top">
+                        <div class="profi__info-user">
+                          <div class="profi__info-name">Жорж Милославский</div>
+                          <div class="profi__info-orders">В очереди 2 заказа</div>
+                        </div>
+                        <div class="profi__info-status">Онлайн</div>
+                      </div>
+                      <div class="profi__info-bottom">
+                        <div class="profi__info-point">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                            fill="none">
+                            <path opacity="0.12"
+                              d="M10.3724 3.52163C10.574 3.11306 10.6748 2.90877 10.8117 2.84349C10.9308 2.78671 11.0692 2.78671 11.1883 2.84349C11.3252 2.90877 11.426 3.11306 11.6277 3.52163L13.5411 7.39784C13.6006 7.51846 13.6303 7.57878 13.6738 7.62561C13.7124 7.66706 13.7586 7.70065 13.8099 7.72452C13.8679 7.75147 13.9344 7.7612 14.0675 7.78065L18.3474 8.40622C18.7981 8.47209 19.0234 8.50502 19.1277 8.61511C19.2184 8.71088 19.261 8.84248 19.2438 8.97327C19.2239 9.12361 19.0609 9.28252 18.7346 9.60032L15.6387 12.6156C15.5423 12.7095 15.494 12.7566 15.4629 12.8125C15.4353 12.862 15.4176 12.9164 15.4108 12.9727C15.4031 13.0362 15.4145 13.1026 15.4372 13.2353L16.1678 17.4943C16.2448 17.9435 16.2832 18.1681 16.2109 18.3014C16.1479 18.4173 16.036 18.4987 15.9062 18.5228C15.757 18.5504 15.5553 18.4443 15.152 18.2322L11.3259 16.22C11.2066 16.1574 11.147 16.1261 11.0842 16.1137C11.0286 16.1028 10.9714 16.1028 10.9158 16.1137C10.853 16.1261 10.7934 16.1574 10.6742 16.22L6.84806 18.2322C6.44468 18.4443 6.24298 18.5504 6.09385 18.5228C5.9641 18.4987 5.85213 18.4173 5.78915 18.3014C5.71675 18.1681 5.75528 17.9435 5.83231 17.4943L6.56278 13.2353C6.58555 13.1026 6.59694 13.0362 6.58923 12.9727C6.58241 12.9164 6.56472 12.862 6.53716 12.8125C6.50602 12.7566 6.45777 12.7095 6.36127 12.6156L3.26549 9.60032C2.9392 9.28252 2.77606 9.12361 2.75621 8.97327C2.73894 8.84248 2.78161 8.71088 2.87234 8.61511C2.97664 8.50502 3.20197 8.47209 3.65266 8.40622L7.93252 7.78065C8.06562 7.7612 8.13217 7.75147 8.19013 7.72452C8.24144 7.70065 8.28764 7.66706 8.32617 7.62561C8.36967 7.57878 8.39944 7.51846 8.45897 7.39784L10.3724 3.52163Z"
+                              fill="#E76F51" />
+                            <path
+                              d="M10.3724 3.52163C10.574 3.11306 10.6749 2.90877 10.8117 2.84349C10.9308 2.78671 11.0692 2.78671 11.1883 2.84349C11.3252 2.90877 11.426 3.11306 11.6277 3.52163L13.5411 7.39784C13.6006 7.51846 13.6303 7.57878 13.6738 7.62561C13.7124 7.66706 13.7586 7.70065 13.8099 7.72452C13.8679 7.75147 13.9344 7.7612 14.0675 7.78065L18.3474 8.40622C18.7981 8.47209 19.0234 8.50502 19.1277 8.61511C19.2184 8.71088 19.261 8.84249 19.2438 8.97327C19.2239 9.12361 19.0609 9.28252 18.7346 9.60032L15.6387 12.6156C15.5423 12.7095 15.494 12.7566 15.4629 12.8125C15.4353 12.862 15.4176 12.9164 15.4108 12.9727C15.4031 13.0362 15.4145 13.1026 15.4372 13.2353L16.1678 17.4943C16.2448 17.9435 16.2832 18.1681 16.2109 18.3014C16.1479 18.4173 16.036 18.4987 15.9062 18.5228C15.757 18.5504 15.5553 18.4443 15.152 18.2322L11.3259 16.22C11.2066 16.1574 11.147 16.1261 11.0842 16.1137C11.0286 16.1028 10.9714 16.1028 10.9158 16.1137C10.853 16.1261 10.7934 16.1574 10.6742 16.22L6.84806 18.2322C6.44468 18.4443 6.24298 18.5504 6.09385 18.5228C5.9641 18.4987 5.85213 18.4173 5.78915 18.3014C5.71675 18.1681 5.75528 17.9435 5.83231 17.4943L6.56278 13.2353C6.58555 13.1026 6.59694 13.0362 6.58923 12.9727C6.58241 12.9164 6.56472 12.862 6.53716 12.8125C6.50602 12.7566 6.45777 12.7095 6.36127 12.6156L3.26549 9.60032C2.9392 9.28252 2.77606 9.12361 2.75621 8.97327C2.73894 8.84249 2.78161 8.71088 2.87234 8.61511C2.97664 8.50502 3.20197 8.47209 3.65266 8.40622L7.93252 7.78065C8.06562 7.7612 8.13217 7.75147 8.19013 7.72452C8.24144 7.70065 8.28764 7.66706 8.32617 7.62561C8.36967 7.57878 8.39944 7.51846 8.45897 7.39784L10.3724 3.52163Z"
+                              stroke="#E76F51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>4.86</span>
+                        </div>
+                        <div class="profi__info-point">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"
+                            fill="none">
+                            <path opacity="0.12"
+                              d="M18.375 11C18.375 15.3493 14.8493 18.875 10.5 18.875C9.45254 18.875 8.45276 18.6705 7.53855 18.2992C7.36358 18.2281 7.2761 18.1926 7.20538 18.1768C7.1362 18.1613 7.08501 18.1556 7.01411 18.1556C6.94164 18.1556 6.8627 18.1687 6.70482 18.195L3.59167 18.7139C3.26566 18.7683 3.10265 18.7954 2.98478 18.7448C2.88162 18.7006 2.79941 18.6184 2.75517 18.5152C2.70461 18.3973 2.73178 18.2343 2.78611 17.9083L3.30497 14.7952C3.33128 14.6373 3.34444 14.5584 3.34443 14.4859C3.34443 14.415 3.33876 14.3638 3.32325 14.2946C3.3074 14.2239 3.27186 14.1364 3.2008 13.9614C2.82952 13.0472 2.625 12.0475 2.625 11C2.625 6.65076 6.15076 3.125 10.5 3.125C14.8493 3.125 18.375 6.65076 18.375 11Z"
+                              fill="#8C13FD" />
+                            <path
+                              d="M7 8.8125H10.5M7 11.875H13.125M10.5 18.875C14.8493 18.875 18.375 15.3493 18.375 11C18.375 6.65076 14.8493 3.125 10.5 3.125C6.15076 3.125 2.625 6.65076 2.625 11C2.625 12.0475 2.82952 13.0472 3.2008 13.9614C3.27186 14.1364 3.3074 14.2239 3.32325 14.2946C3.33876 14.3638 3.34443 14.415 3.34443 14.4859C3.34444 14.5584 3.33128 14.6373 3.30497 14.7952L2.78611 17.9083C2.73178 18.2343 2.70461 18.3973 2.75517 18.5152C2.79941 18.6184 2.88162 18.7006 2.98478 18.7448C3.10265 18.7954 3.26566 18.7683 3.59167 18.7139L6.70482 18.195C6.8627 18.1687 6.94164 18.1556 7.01411 18.1556C7.08501 18.1556 7.1362 18.1613 7.20538 18.1767C7.2761 18.1926 7.36358 18.2281 7.53855 18.2992C8.45276 18.6705 9.45254 18.875 10.5 18.875Z"
+                              stroke="#8C13FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>1 204</span>
+                        </div>
+                        <div class="profi__info-price">
+                          от <strong>1500₽/час</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profi__projects">
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M12 12C14.4853 12 16.5 9.98528 16.5 7.5C16.5 5.01472 14.4853 3 12 3C9.51472 3 7.5 5.01472 7.5 7.5C7.5 9.98528 9.51472 12 12 12Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Исполнитель</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <p>Опыт в вебе свыше 15 лет, Профессионально, качественно подхожу к работе, всегда готов сделать
+                        заказчику приятный бонус.</p>
+                      <a href="">Вся информация</a>
+                    </div>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M21 12C21 16.9706 16.9706 21 12 21C10.8029 21 9.6603 20.7663 8.61549 20.3419C8.41552 20.2607 8.31554 20.2201 8.23472 20.202C8.15566 20.1843 8.09715 20.1778 8.01613 20.1778C7.9333 20.1778 7.84309 20.1928 7.66265 20.2229L4.10476 20.8159C3.73218 20.878 3.54589 20.909 3.41118 20.8512C3.29328 20.8007 3.19933 20.7067 3.14876 20.5888C3.09098 20.4541 3.12203 20.2678 3.18413 19.8952L3.77711 16.3374C3.80718 16.1569 3.82222 16.0667 3.82221 15.9839C3.8222 15.9028 3.81572 15.8443 3.798 15.7653C3.77988 15.6845 3.73927 15.5845 3.65806 15.3845C3.23374 14.3397 3 13.1971 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M8 9.5H12M8 13H15M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.1971 3.23374 14.3397 3.65806 15.3845C3.73927 15.5845 3.77988 15.6845 3.798 15.7653C3.81572 15.8443 3.8222 15.9028 3.82221 15.9839C3.82222 16.0667 3.80718 16.1569 3.77711 16.3374L3.18413 19.8952C3.12203 20.2678 3.09098 20.4541 3.14876 20.5888C3.19933 20.7067 3.29328 20.8007 3.41118 20.8512C3.54589 20.909 3.73218 20.878 4.10476 20.8159L7.66265 20.2229C7.84309 20.1928 7.9333 20.1778 8.01613 20.1778C8.09715 20.1778 8.15566 20.1843 8.23472 20.202C8.31554 20.2201 8.41552 20.2607 8.61549 20.3419C9.6603 20.7663 10.8029 21 12 21Z"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Отзывы</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <div class="profi__descr-right-wrapper">
+                        <p>Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в
+                          бонус
+                          подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!</p>
+                        <div class="profi__descr-testimonial">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="83" height="82" viewBox="0 0 83 82"
+                            fill="none">
+                            <rect opacity="0.15" x="27" width="38" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="22" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" x="27" y="22" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <path opacity="0.15"
+                              d="M54 28C54 26.1362 54 25.2044 54.3045 24.4693C54.7105 23.4892 55.4892 22.7105 56.4693 22.3045C57.2044 22 58.1362 22 60 22H72V34H60C58.1362 34 57.2044 34 56.4693 33.6955C55.4892 33.2895 54.7105 32.5108 54.3045 31.5307C54 30.7956 54 29.8638 54 28Z"
+                              fill="#96A0B5" />
+                            <rect opacity="0.15" x="54" y="44" width="14" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="44" width="50" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="66" width="68" height="12" rx="4" fill="#96A0B5" />
+                          </svg>
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                              fill="none">
+                              <path d="M0.999359 7H13.0827M13.0827 7L9.58269 3.5M13.0827 7L9.58269 10.5" stroke="white"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+
+                      <a href="">Все отзывы (1 204)</a>
+                    </div>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M16.5 13.5C19.5376 13.5 22 12.6046 22 11.5V19C22 20.1046 19.5376 21 16.5 21C13.4624 21 11 20.1046 11 19V11.5C11 12.6046 13.4624 13.5 16.5 13.5Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M13 5C13 6.10457 10.5376 7 7.5 7C4.46243 7 2 6.10457 2 5M13 5C13 3.89543 10.5376 3 7.5 3C4.46243 3 2 3.89543 2 5M13 5V6.5M2 5V17C2 18.1046 4.46243 19 7.5 19M7.5 11C7.33145 11 7.16468 10.9972 7 10.9918C4.19675 10.9 2 10.0433 2 9M7.5 15C4.46243 15 2 14.1046 2 13M22 11.5C22 12.6046 19.5376 13.5 16.5 13.5C13.4624 13.5 11 12.6046 11 11.5M22 11.5C22 10.3954 19.5376 9.5 16.5 9.5C13.4624 9.5 11 10.3954 11 11.5M22 11.5V19C22 20.1046 19.5376 21 16.5 21C13.4624 21 11 20.1046 11 19V11.5M22 15.25C22 16.3546 19.5376 17.25 16.5 17.25C13.4624 17.25 11 16.3546 11 15.25"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Стоимость
+                        услуг</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <div class="profi__descr-service">
+                        <span class="black">Интерфейсы</span>
+                        <p>1500 – 2500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>UI анализ</span>
+                        <p>1500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>UX анализ</span>
+                        <p>1500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>Комплексный анализ</span>
+                        <p>2500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span class="black">Проектирование</span>
+                        <p>1500 – 2500 ₽/ч</p>
+                      </div>
+                      <a href="">Все услуги (21)</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="profi__block">
+                  <div class="profi__head">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                    <div class="profi__info">
+                      <div class="profi__info-top">
+                        <div class="profi__info-user">
+                          <div class="profi__info-name">Жорж Милославский</div>
+                          <div class="profi__info-orders">В очереди 2 заказа</div>
+                        </div>
+                        <div class="profi__info-status">Онлайн</div>
+                      </div>
+                      <div class="profi__info-bottom">
+                        <div class="profi__info-point">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                            fill="none">
+                            <path opacity="0.12"
+                              d="M10.3724 3.52163C10.574 3.11306 10.6748 2.90877 10.8117 2.84349C10.9308 2.78671 11.0692 2.78671 11.1883 2.84349C11.3252 2.90877 11.426 3.11306 11.6277 3.52163L13.5411 7.39784C13.6006 7.51846 13.6303 7.57878 13.6738 7.62561C13.7124 7.66706 13.7586 7.70065 13.8099 7.72452C13.8679 7.75147 13.9344 7.7612 14.0675 7.78065L18.3474 8.40622C18.7981 8.47209 19.0234 8.50502 19.1277 8.61511C19.2184 8.71088 19.261 8.84248 19.2438 8.97327C19.2239 9.12361 19.0609 9.28252 18.7346 9.60032L15.6387 12.6156C15.5423 12.7095 15.494 12.7566 15.4629 12.8125C15.4353 12.862 15.4176 12.9164 15.4108 12.9727C15.4031 13.0362 15.4145 13.1026 15.4372 13.2353L16.1678 17.4943C16.2448 17.9435 16.2832 18.1681 16.2109 18.3014C16.1479 18.4173 16.036 18.4987 15.9062 18.5228C15.757 18.5504 15.5553 18.4443 15.152 18.2322L11.3259 16.22C11.2066 16.1574 11.147 16.1261 11.0842 16.1137C11.0286 16.1028 10.9714 16.1028 10.9158 16.1137C10.853 16.1261 10.7934 16.1574 10.6742 16.22L6.84806 18.2322C6.44468 18.4443 6.24298 18.5504 6.09385 18.5228C5.9641 18.4987 5.85213 18.4173 5.78915 18.3014C5.71675 18.1681 5.75528 17.9435 5.83231 17.4943L6.56278 13.2353C6.58555 13.1026 6.59694 13.0362 6.58923 12.9727C6.58241 12.9164 6.56472 12.862 6.53716 12.8125C6.50602 12.7566 6.45777 12.7095 6.36127 12.6156L3.26549 9.60032C2.9392 9.28252 2.77606 9.12361 2.75621 8.97327C2.73894 8.84248 2.78161 8.71088 2.87234 8.61511C2.97664 8.50502 3.20197 8.47209 3.65266 8.40622L7.93252 7.78065C8.06562 7.7612 8.13217 7.75147 8.19013 7.72452C8.24144 7.70065 8.28764 7.66706 8.32617 7.62561C8.36967 7.57878 8.39944 7.51846 8.45897 7.39784L10.3724 3.52163Z"
+                              fill="#E76F51" />
+                            <path
+                              d="M10.3724 3.52163C10.574 3.11306 10.6749 2.90877 10.8117 2.84349C10.9308 2.78671 11.0692 2.78671 11.1883 2.84349C11.3252 2.90877 11.426 3.11306 11.6277 3.52163L13.5411 7.39784C13.6006 7.51846 13.6303 7.57878 13.6738 7.62561C13.7124 7.66706 13.7586 7.70065 13.8099 7.72452C13.8679 7.75147 13.9344 7.7612 14.0675 7.78065L18.3474 8.40622C18.7981 8.47209 19.0234 8.50502 19.1277 8.61511C19.2184 8.71088 19.261 8.84249 19.2438 8.97327C19.2239 9.12361 19.0609 9.28252 18.7346 9.60032L15.6387 12.6156C15.5423 12.7095 15.494 12.7566 15.4629 12.8125C15.4353 12.862 15.4176 12.9164 15.4108 12.9727C15.4031 13.0362 15.4145 13.1026 15.4372 13.2353L16.1678 17.4943C16.2448 17.9435 16.2832 18.1681 16.2109 18.3014C16.1479 18.4173 16.036 18.4987 15.9062 18.5228C15.757 18.5504 15.5553 18.4443 15.152 18.2322L11.3259 16.22C11.2066 16.1574 11.147 16.1261 11.0842 16.1137C11.0286 16.1028 10.9714 16.1028 10.9158 16.1137C10.853 16.1261 10.7934 16.1574 10.6742 16.22L6.84806 18.2322C6.44468 18.4443 6.24298 18.5504 6.09385 18.5228C5.9641 18.4987 5.85213 18.4173 5.78915 18.3014C5.71675 18.1681 5.75528 17.9435 5.83231 17.4943L6.56278 13.2353C6.58555 13.1026 6.59694 13.0362 6.58923 12.9727C6.58241 12.9164 6.56472 12.862 6.53716 12.8125C6.50602 12.7566 6.45777 12.7095 6.36127 12.6156L3.26549 9.60032C2.9392 9.28252 2.77606 9.12361 2.75621 8.97327C2.73894 8.84249 2.78161 8.71088 2.87234 8.61511C2.97664 8.50502 3.20197 8.47209 3.65266 8.40622L7.93252 7.78065C8.06562 7.7612 8.13217 7.75147 8.19013 7.72452C8.24144 7.70065 8.28764 7.66706 8.32617 7.62561C8.36967 7.57878 8.39944 7.51846 8.45897 7.39784L10.3724 3.52163Z"
+                              stroke="#E76F51" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>4.86</span>
+                        </div>
+                        <div class="profi__info-point">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22"
+                            fill="none">
+                            <path opacity="0.12"
+                              d="M18.375 11C18.375 15.3493 14.8493 18.875 10.5 18.875C9.45254 18.875 8.45276 18.6705 7.53855 18.2992C7.36358 18.2281 7.2761 18.1926 7.20538 18.1768C7.1362 18.1613 7.08501 18.1556 7.01411 18.1556C6.94164 18.1556 6.8627 18.1687 6.70482 18.195L3.59167 18.7139C3.26566 18.7683 3.10265 18.7954 2.98478 18.7448C2.88162 18.7006 2.79941 18.6184 2.75517 18.5152C2.70461 18.3973 2.73178 18.2343 2.78611 17.9083L3.30497 14.7952C3.33128 14.6373 3.34444 14.5584 3.34443 14.4859C3.34443 14.415 3.33876 14.3638 3.32325 14.2946C3.3074 14.2239 3.27186 14.1364 3.2008 13.9614C2.82952 13.0472 2.625 12.0475 2.625 11C2.625 6.65076 6.15076 3.125 10.5 3.125C14.8493 3.125 18.375 6.65076 18.375 11Z"
+                              fill="#8C13FD" />
+                            <path
+                              d="M7 8.8125H10.5M7 11.875H13.125M10.5 18.875C14.8493 18.875 18.375 15.3493 18.375 11C18.375 6.65076 14.8493 3.125 10.5 3.125C6.15076 3.125 2.625 6.65076 2.625 11C2.625 12.0475 2.82952 13.0472 3.2008 13.9614C3.27186 14.1364 3.3074 14.2239 3.32325 14.2946C3.33876 14.3638 3.34443 14.415 3.34443 14.4859C3.34444 14.5584 3.33128 14.6373 3.30497 14.7952L2.78611 17.9083C2.73178 18.2343 2.70461 18.3973 2.75517 18.5152C2.79941 18.6184 2.88162 18.7006 2.98478 18.7448C3.10265 18.7954 3.26566 18.7683 3.59167 18.7139L6.70482 18.195C6.8627 18.1687 6.94164 18.1556 7.01411 18.1556C7.08501 18.1556 7.1362 18.1613 7.20538 18.1767C7.2761 18.1926 7.36358 18.2281 7.53855 18.2992C8.45276 18.6705 9.45254 18.875 10.5 18.875Z"
+                              stroke="#8C13FD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                          <span>1 204</span>
+                        </div>
+                        <div class="profi__info-price">
+                          от <strong>1500₽/час</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="profi__projects">
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                    <a href="" class="profi__projects-item">
+                      <img src="images/project.png" alt="">
+                    </a>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M12 12C14.4853 12 16.5 9.98528 16.5 7.5C16.5 5.01472 14.4853 3 12 3C9.51472 3 7.5 5.01472 7.5 7.5C7.5 9.98528 9.51472 12 12 12Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M20 21C20 19.6044 20 18.9067 19.8278 18.3389C19.44 17.0605 18.4395 16.06 17.1611 15.6722C16.5933 15.5 15.8956 15.5 14.5 15.5H9.5C8.10444 15.5 7.40665 15.5 6.83886 15.6722C5.56045 16.06 4.56004 17.0605 4.17224 18.3389C4 18.9067 4 19.6044 4 21M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Исполнитель</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <p>Опыт в вебе свыше 15 лет, Профессионально, качественно подхожу к работе, всегда готов сделать
+                        заказчику приятный бонус.</p>
+                      <a href="">Вся информация</a>
+                    </div>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M21 12C21 16.9706 16.9706 21 12 21C10.8029 21 9.6603 20.7663 8.61549 20.3419C8.41552 20.2607 8.31554 20.2201 8.23472 20.202C8.15566 20.1843 8.09715 20.1778 8.01613 20.1778C7.9333 20.1778 7.84309 20.1928 7.66265 20.2229L4.10476 20.8159C3.73218 20.878 3.54589 20.909 3.41118 20.8512C3.29328 20.8007 3.19933 20.7067 3.14876 20.5888C3.09098 20.4541 3.12203 20.2678 3.18413 19.8952L3.77711 16.3374C3.80718 16.1569 3.82222 16.0667 3.82221 15.9839C3.8222 15.9028 3.81572 15.8443 3.798 15.7653C3.77988 15.6845 3.73927 15.5845 3.65806 15.3845C3.23374 14.3397 3 13.1971 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M8 9.5H12M8 13H15M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.1971 3.23374 14.3397 3.65806 15.3845C3.73927 15.5845 3.77988 15.6845 3.798 15.7653C3.81572 15.8443 3.8222 15.9028 3.82221 15.9839C3.82222 16.0667 3.80718 16.1569 3.77711 16.3374L3.18413 19.8952C3.12203 20.2678 3.09098 20.4541 3.14876 20.5888C3.19933 20.7067 3.29328 20.8007 3.41118 20.8512C3.54589 20.909 3.73218 20.878 4.10476 20.8159L7.66265 20.2229C7.84309 20.1928 7.9333 20.1778 8.01613 20.1778C8.09715 20.1778 8.15566 20.1843 8.23472 20.202C8.31554 20.2201 8.41552 20.2607 8.61549 20.3419C9.6603 20.7663 10.8029 21 12 21Z"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Отзывы</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <div class="profi__descr-right-wrapper">
+                        <p>Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в
+                          бонус
+                          подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!</p>
+                        <div class="profi__descr-testimonial">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="83" height="82" viewBox="0 0 83 82"
+                            fill="none">
+                            <rect opacity="0.15" x="27" width="38" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="22" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" x="27" y="22" width="23" height="12" rx="4" fill="#96A0B5" />
+                            <path opacity="0.15"
+                              d="M54 28C54 26.1362 54 25.2044 54.3045 24.4693C54.7105 23.4892 55.4892 22.7105 56.4693 22.3045C57.2044 22 58.1362 22 60 22H72V34H60C58.1362 34 57.2044 34 56.4693 33.6955C55.4892 33.2895 54.7105 32.5108 54.3045 31.5307C54 30.7956 54 29.8638 54 28Z"
+                              fill="#96A0B5" />
+                            <rect opacity="0.15" x="54" y="44" width="14" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="44" width="50" height="12" rx="4" fill="#96A0B5" />
+                            <rect opacity="0.15" y="66" width="68" height="12" rx="4" fill="#96A0B5" />
+                          </svg>
+                          <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                              fill="none">
+                              <path d="M0.999359 7H13.0827M13.0827 7L9.58269 3.5M13.0827 7L9.58269 10.5" stroke="white"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+
+                      <a href="">Все отзывы (1 204)</a>
+                    </div>
+                  </div>
+                  <div class="profi__descr">
+                    <div class="profi__descr-left">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path opacity="0.12"
+                          d="M16.5 13.5C19.5376 13.5 22 12.6046 22 11.5V19C22 20.1046 19.5376 21 16.5 21C13.4624 21 11 20.1046 11 19V11.5C11 12.6046 13.4624 13.5 16.5 13.5Z"
+                          fill="#3C6CEB" />
+                        <path
+                          d="M13 5C13 6.10457 10.5376 7 7.5 7C4.46243 7 2 6.10457 2 5M13 5C13 3.89543 10.5376 3 7.5 3C4.46243 3 2 3.89543 2 5M13 5V6.5M2 5V17C2 18.1046 4.46243 19 7.5 19M7.5 11C7.33145 11 7.16468 10.9972 7 10.9918C4.19675 10.9 2 10.0433 2 9M7.5 15C4.46243 15 2 14.1046 2 13M22 11.5C22 12.6046 19.5376 13.5 16.5 13.5C13.4624 13.5 11 12.6046 11 11.5M22 11.5C22 10.3954 19.5376 9.5 16.5 9.5C13.4624 9.5 11 10.3954 11 11.5M22 11.5V19C22 20.1046 19.5376 21 16.5 21C13.4624 21 11 20.1046 11 19V11.5M22 15.25C22 16.3546 19.5376 17.25 16.5 17.25C13.4624 17.25 11 16.3546 11 15.25"
+                          stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>Стоимость
+                        услуг</span>
+                    </div>
+                    <div class="profi__descr-right">
+                      <div class="profi__descr-service">
+                        <span class="black">Интерфейсы</span>
+                        <p>1500 – 2500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>UI анализ</span>
+                        <p>1500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>UX анализ</span>
+                        <p>1500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span>Комплексный анализ</span>
+                        <p>2500 ₽/ч</p>
+                      </div>
+                      <div class="profi__descr-service">
+                        <span class="black">Проектирование</span>
+                        <p>1500 – 2500 ₽/ч</p>
+                      </div>
+                      <a href="">Все услуги (21)</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="profi__more">Показать еще</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a href="#" class="footer__logo">
+            <img src="images/logo.png" alt="">
+          </a>
+          <div class="footer__descr">
+            <h6>
+              Quick-do.ru is a store of freelance services
+            </h6>
+            <p>
+              Working with us, you acquire not just a reliable partner, but a loyal friend.
+            </p>
+          </div>
+
+          <div class="footer__columns">
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  To the customer
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  To the freelancer
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  News
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  Question - answer
+                </a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  About
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  Rules of Service
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  Support
+                </a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="policy">
+            © 2023 Quick-do.ru
+          </p>
+          <div class="socials">
+            <a href="#" class="socials-item">
+              <img src="images/socials/logo-tiktok 1.svg" alt="">
+            </a>
+            <a href="#" class="socials-item">
+              <img src="images/socials/instagram-black 1.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

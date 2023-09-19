@@ -1,0 +1,47 @@
+html,
+body {
+   height: 100%;
+}
+
+body {
+   font-size: 14px;
+   font-weight: 400;
+   overflow-x: hidden;
+   font-family: 'Inter', sans-serif;
+   line-height: 1.5;
+   background: #FBFCFE;
+   // cursor: url(../images/default.svg) default;
+}
+
+button {
+   cursor: pointer;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+.main {
+   flex: 1 0 auto;
+}
+
+.footer {
+   flex: 0 0 auto;
+}
+
+.container {
+   max-width: 1146px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+a {
+   color: inherit;
+   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+   width: 0;
+}

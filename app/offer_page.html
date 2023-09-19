@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Quick</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__top">
+          <a href="#" class="header__logo">
+            <img src="images/logo.png" alt="">
+          </a>
+          <div class="header__search">
+            <input type="text" placeholder="Поиск услуг" class="header__search-input">
+            <buttom class="search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path
+                  d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                  stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </buttom>
+          </div>
+          <div class="heder__right">
+            <button class="new__offer">
+              <span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M6.99996 2.91663V11.0833M2.91663 6.99996H11.0833" stroke="#38B000" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <i>Новая услуга </i>
+              </span>
+            </button>
+            <div class="header__buttons ">
+
+              <button class="message">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7.99962 9.5H11.9996M7.99962 13H14.9996M12.4996 20C17.194 20 20.9996 16.1944 20.9996 11.5C20.9996 6.80558 17.194 3 12.4996 3C7.8052 3 3.99962 6.80558 3.99962 11.5C3.99962 12.45 4.15547 13.3636 4.443 14.2166C4.55119 14.5376 4.60529 14.6981 4.61505 14.8214C4.62469 14.9432 4.6174 15.0286 4.58728 15.1469C4.55677 15.2668 4.48942 15.3915 4.35472 15.6408L2.71906 18.6684C2.48575 19.1002 2.36909 19.3161 2.3952 19.4828C2.41794 19.6279 2.50337 19.7557 2.6288 19.8322C2.7728 19.9201 3.01692 19.8948 3.50517 19.8444L8.62619 19.315C8.78127 19.299 8.85881 19.291 8.92949 19.2937C8.999 19.2963 9.04807 19.3029 9.11586 19.3185C9.18478 19.3344 9.27145 19.3678 9.44478 19.4345C10.3928 19.7998 11.4228 20 12.4996 20Z"
+                    stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="bell">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M14.391 18.015C14.8198 19.6154 13.8701 21.2604 12.2697 21.6893C10.6693 22.1181 9.02426 21.1683 8.59543 19.5679M10.8915 5.74109C11.1957 5.19379 11.2959 4.53229 11.1211 3.8797C10.7637 2.54603 9.39288 1.75457 8.05921 2.11193C6.72555 2.46928 5.93409 3.84013 6.29144 5.17379C6.46631 5.82639 6.88384 6.34916 7.42094 6.67103M16.2359 9.44553C15.879 8.1134 14.926 6.99944 13.5868 6.3487C12.2475 5.69797 10.6316 5.56377 9.09449 5.97563C7.55741 6.38749 6.22508 7.31167 5.3906 8.54486C4.55612 9.77805 4.28785 11.2192 4.64479 12.5514C5.23537 14.7554 5.12069 16.5138 4.74774 17.8499C4.32267 19.3728 4.11014 20.1342 4.16756 20.2871C4.23325 20.462 4.28076 20.5101 4.455 20.5776C4.60729 20.6366 5.24706 20.4651 6.5266 20.1223L18.3917 16.9431C19.6712 16.6002 20.311 16.4288 20.4134 16.3015C20.5305 16.1559 20.5476 16.0906 20.5171 15.9063C20.4904 15.7451 19.9256 15.192 18.796 14.0857C17.805 13.115 16.8265 11.6496 16.2359 9.44553Z"
+                    stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26" fill="none">
+                  <path
+                    d="M2 2.14636H3.30616C3.55218 2.14636 3.67519 2.14636 3.77418 2.19491C3.86142 2.2377 3.93535 2.30651 3.98715 2.39315C4.04593 2.49144 4.06333 2.62214 4.09812 2.88351L4.57143 6.43921M4.57143 6.43921L5.62332 14.7366C5.75681 15.7896 5.82355 16.3161 6.0581 16.7123C6.26478 17.0615 6.56108 17.3392 6.91135 17.512C7.30886 17.7079 7.80394 17.7079 8.79411 17.7079H17.352C18.2945 17.7079 18.7658 17.7079 19.151 17.5259C19.4905 17.3655 19.7818 17.1067 19.9923 16.7787C20.2309 16.4068 20.3191 15.91 20.4955 14.9163L21.8191 7.45842C21.8812 7.10869 21.9122 6.93382 21.8672 6.79712C21.8278 6.67721 21.7499 6.57623 21.6475 6.51221C21.5308 6.43921 21.365 6.43921 21.0332 6.43921H4.57143ZM10 22.5374C10 23.1301 9.55228 23.6106 9 23.6106C8.44772 23.6106 8 23.1301 8 22.5374C8 21.9446 8.44772 21.4642 9 21.4642C9.55228 21.4642 10 21.9446 10 22.5374ZM18 22.5374C18 23.1301 17.5523 23.6106 17 23.6106C16.4477 23.6106 16 23.1301 16 22.5374C16 21.9446 16.4477 21.4642 17 21.4642C17.5523 21.4642 18 21.9446 18 22.5374Z"
+                    stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="header__balance">25 800₽</div>
+            <div class="header__user">
+              <div class="header__user-avatar">
+                <img src="images/user-header.png" alt="">
+                <div class="header__user-info">
+                  <div class="header__user-name">Жорж М</div>
+                  <div class="header__user-status">Исполнитель</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="header__bottom">
+          <a class="header__bottom-item">
+            <img src="images/icons/palette.svg" alt="">
+            <span>Graphics</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/brackets-slash.3 1.svg" alt="">
+            <span>Development & IT</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/type-02.3 1.svg" alt="">
+            <span>Texts & translations</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/notification-text.svg" alt="">
+            <span>Marketing & advertising</span>
+          </a>
+
+          <a class="header__bottom-item">
+            <img src="images/icons/bar-line-chart.svg" alt="">
+            <span>SEO & traffic</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/music-note.svg" alt="">
+            <span>Audio & video</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/diamond.svg" alt="">
+            <span>Business</span>
+          </a>
+          <a class="header__bottom-item">
+            <img src="images/icons/sun-setting.svg" alt="">
+            <span>Lifestyle</span>
+          </a>
+
+        </div>
+        <div class="header__bottom"></div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="page__top">
+        <div class="container">
+          <div class="page__breadcrumbs">
+            <a href="index.html" class="page__breadcrumbs-home page__breadcrumbs-link">
+              <img src="images/icons/home-03 1.svg" alt="">
+            </a>
+            <a href="" class="page__breadcrumbs-category page__breadcrumbs-link">Дизайн</a>
+            <a href="" class="page__breadcrumbs-midle page__breadcrumbs-link">Веб и мобильный дизайн</a>
+            <a href="" class="page__breadcrumbs-last page__breadcrumbs-link">Веб дизайн</a>
+          </div>
+          <div class="page__heading">
+            <h2>Создание Landing Page</span>
+          </div>
+          <div class="service__body-top max">
+
+            <div class="service__body-top-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <g clip-path="url(#clip0_154_1948)">
+                  <path
+                    d="M6.99984 3.50002V7.00002L9.33317 8.16669M12.8332 7.00002C12.8332 10.2217 10.2215 12.8334 6.99984 12.8334C3.77818 12.8334 1.1665 10.2217 1.1665 7.00002C1.1665 3.77836 3.77818 1.16669 6.99984 1.16669C10.2215 1.16669 12.8332 3.77836 12.8332 7.00002Z"
+                    stroke="#96A0B5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_154_1948">
+                    <rect width="14" height="14" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>10 дней на работу</span>
+            </div>
+            <div class="service__body-top-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M12.8332 7H10.4998L8.74984 12.25L5.24984 1.75L3.49984 7H1.1665" stroke="#96A0B5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>В очереди 2 заказа</span>
+            </div>
+            <div class="service__body-top-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <g clip-path="url(#clip0_154_1944)">
+                  <path
+                    d="M12.8332 6.46668V7.00335C12.8325 8.26125 12.4251 9.48525 11.6719 10.4927C10.9188 11.5003 9.86009 12.2373 8.65382 12.594C7.44749 12.9506 6.15826 12.9078 4.97828 12.4719C3.79832 12.0359 2.79088 11.2302 2.10623 10.175C1.42158 9.11974 1.09638 7.87141 1.17915 6.61619C1.26191 5.36102 1.74821 4.16622 2.5655 3.20999C3.38279 2.25375 4.4873 1.58734 5.71428 1.31011C6.94127 1.03289 8.22501 1.15972 9.374 1.67169M12.8332 2.33335L6.99984 8.17252L5.24984 6.42252"
+                    stroke="#96A0B5" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_154_1944">
+                    <rect width="14" height="14" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>Куплено 53 раза</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="content max">
+        <div class="container">
+          <div class="content__wrapper">
+
+            <div class="content__profi">
+              <div class="swiper-offer">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/offer.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/offer.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/offer.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-button-next next-slide">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M0.99939 7H13.0827M13.0827 7L9.58272 3.5M13.0827 7L9.58272 10.5" stroke="white"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <div class="swiper-button-prev prev-slide">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M13.0007 7H0.917338M0.917338 7L4.41734 3.5M0.917338 7L4.41734 10.5" stroke="white"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="content__filter">
+              <div class="variations">
+                <div class="variations-item">
+                  <div class="variations-item-top">
+                    <span>10 000₽</span>
+                    <p>Эконом</p>
+                  </div>
+                  <div class="variations-item__dropdown">
+                    <p>Пакет содержит:</p>
+                    <ul class="variations__list">
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                    </ul>
+                    <div class="variations-item__bottom">
+                      <button class="variations-btn blue-btn">Заказать</button>
+                      <button class="variations-btn-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M2 2H3.30616C3.55218 2 3.67519 2 3.77418 2.04524C3.86142 2.08511 3.93535 2.14922 3.98715 2.22995C4.04593 2.32154 4.06333 2.44332 4.09812 2.68686L4.57143 6M4.57143 6L5.62332 13.7314C5.75681 14.7125 5.82355 15.2031 6.0581 15.5723C6.26478 15.8977 6.56108 16.1564 6.91135 16.3174C7.30886 16.5 7.80394 16.5 8.79411 16.5H17.352C18.2945 16.5 18.7658 16.5 19.151 16.3304C19.4905 16.1809 19.7818 15.9398 19.9923 15.6342C20.2309 15.2876 20.3191 14.8247 20.4955 13.8988L21.8191 6.94969C21.8812 6.62381 21.9122 6.46087 21.8672 6.3335C21.8278 6.22177 21.7499 6.12768 21.6475 6.06802C21.5308 6 21.365 6 21.0332 6H4.57143ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21Z"
+                            stroke="#121F3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="variations-item">
+                  <div class="variations-item-top">
+                    <span>40 000₽</span>
+                    <p>Стандарт</p>
+                  </div>
+                  <div class="variations-item__dropdown">
+                    <p>Пакет содержит:</p>
+                    <ul class="variations__list">
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                    </ul>
+                    <div class="variations-item__bottom">
+                      <button class="variations-btn blue-btn">Заказать</button>
+                      <button class="variations-btn-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M2 2H3.30616C3.55218 2 3.67519 2 3.77418 2.04524C3.86142 2.08511 3.93535 2.14922 3.98715 2.22995C4.04593 2.32154 4.06333 2.44332 4.09812 2.68686L4.57143 6M4.57143 6L5.62332 13.7314C5.75681 14.7125 5.82355 15.2031 6.0581 15.5723C6.26478 15.8977 6.56108 16.1564 6.91135 16.3174C7.30886 16.5 7.80394 16.5 8.79411 16.5H17.352C18.2945 16.5 18.7658 16.5 19.151 16.3304C19.4905 16.1809 19.7818 15.9398 19.9923 15.6342C20.2309 15.2876 20.3191 14.8247 20.4955 13.8988L21.8191 6.94969C21.8812 6.62381 21.9122 6.46087 21.8672 6.3335C21.8278 6.22177 21.7499 6.12768 21.6475 6.06802C21.5308 6 21.365 6 21.0332 6H4.57143ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21Z"
+                            stroke="#121F3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="variations-item">
+                  <div class="variations-item-top">
+                    <span>1 900 000₽</span>
+                    <p>Бизнес</p>
+                  </div>
+                  <div class="variations-item__dropdown">
+                    <p>Пакет содержит:</p>
+                    <ul class="variations__list">
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                      <li class="offer__list-item ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                        <span>Исходник в psd</span>
+                      </li>
+                    </ul>
+                    <div class="variations-item__bottom">
+                      <button class="variations-btn blue-btn">Заказать</button>
+                      <button class="variations-btn-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path
+                            d="M2 2H3.30616C3.55218 2 3.67519 2 3.77418 2.04524C3.86142 2.08511 3.93535 2.14922 3.98715 2.22995C4.04593 2.32154 4.06333 2.44332 4.09812 2.68686L4.57143 6M4.57143 6L5.62332 13.7314C5.75681 14.7125 5.82355 15.2031 6.0581 15.5723C6.26478 15.8977 6.56108 16.1564 6.91135 16.3174C7.30886 16.5 7.80394 16.5 8.79411 16.5H17.352C18.2945 16.5 18.7658 16.5 19.151 16.3304C19.4905 16.1809 19.7818 15.9398 19.9923 15.6342C20.2309 15.2876 20.3191 14.8247 20.4955 13.8988L21.8191 6.94969C21.8812 6.62381 21.9122 6.46087 21.8672 6.3335C21.8278 6.22177 21.7499 6.12768 21.6475 6.06802C21.5308 6 21.365 6 21.0332 6H4.57143ZM10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM18 21C18 21.5523 17.5523 22 17 22C16.4477 22 16 21.5523 16 21C16 20.4477 16.4477 20 17 20C17.5523 20 18 20.4477 18 21Z"
+                            stroke="#121F3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white-block">
+                <div class="opinion">
+                  <div class="opinion-title">Мнение покупателей</div>
+                  <div class="opinion__wrap">
+                    <div class="service__body-left">
+                      <div class="service__body-bottom-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <g clip-path="url(#clip0_154_1959)">
+                            <path
+                              d="M6 10.5C6 10.5 7.125 12 9 12C10.875 12 12 10.5 12 10.5M11.25 6.75H11.2575M6.75 6.75H6.7575M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9ZM11.625 6.75C11.625 6.9571 11.4571 7.125 11.25 7.125C11.0429 7.125 10.875 6.9571 10.875 6.75C10.875 6.54289 11.0429 6.375 11.25 6.375C11.4571 6.375 11.625 6.54289 11.625 6.75ZM7.125 6.75C7.125 6.9571 6.9571 7.125 6.75 7.125C6.54289 7.125 6.375 6.9571 6.375 6.75C6.375 6.54289 6.54289 6.375 6.75 6.375C6.9571 6.375 7.125 6.54289 7.125 6.75Z"
+                              stroke="#38B000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_154_1959">
+                              <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>18</span>
+                      </div>
+                      <div class="service__body-bottom-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <g clip-path="url(#clip0_154_1965)">
+                            <path
+                              d="M6 11.25H12M11.25 6.75H11.2575M6.75 6.75H6.7575M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9ZM11.625 6.75C11.625 6.95711 11.4571 7.125 11.25 7.125C11.0429 7.125 10.875 6.95711 10.875 6.75C10.875 6.54289 11.0429 6.375 11.25 6.375C11.4571 6.375 11.625 6.54289 11.625 6.75ZM7.125 6.75C7.125 6.95711 6.95711 7.125 6.75 7.125C6.54289 7.125 6.375 6.95711 6.375 6.75C6.375 6.54289 6.54289 6.375 6.75 6.375C6.95711 6.375 7.125 6.54289 7.125 6.75Z"
+                              stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_154_1965">
+                              <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>02</span>
+                      </div>
+                      <div class="service__body-bottom-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <g clip-path="url(#clip0_154_1971)">
+                            <path
+                              d="M12 12C12 12 10.875 10.5 9 10.5C7.125 10.5 6 12 6 12M12.75 6.93C12.4537 7.29375 12.0487 7.5 11.625 7.5C11.2013 7.5 10.8075 7.29375 10.5 6.93M7.5 6.93C7.20375 7.29375 6.79875 7.5 6.375 7.5C5.95125 7.5 5.5575 7.29375 5.25 6.93M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z"
+                              stroke="#DC2F02" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_154_1971">
+                              <rect width="18" height="18" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <span>10</span>
+                      </div>
+                    </div>
+                    <div class="like">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                          d="M16.1111 3C19.6333 3 22 6.3525 22 9.48C22 15.8138 12.1778 21 12 21C11.8222 21 2 15.8138 2 9.48C2 6.3525 4.36667 3 7.88889 3C9.91111 3 11.2333 4.02375 12 4.92375C12.7667 4.02375 14.0889 3 16.1111 3Z"
+                          stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span>32</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="white-block">
+                <div class="white-block-title">
+                  <span>Автор</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M16.1111 3C19.6333 3 22 6.3525 22 9.48C22 15.8138 12.1778 21 12 21C11.8222 21 2 15.8138 2 9.48C2 6.3525 4.36667 3 7.88889 3C9.91111 3 11.2333 4.02375 12 4.92375C12.7667 4.02375 14.0889 3 16.1111 3Z"
+                      stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+
+                <div class="freelancer__card">
+                  <div class="freelancer__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="" class="">
+                    <span>PROFI</span>
+                  </div>
+                  <span class="freelancer__name">Жорж Милославский</span>
+                  <p class="freelancer__date">На сайте 5 лет и 7 месяцев </p>
+                  <div class="freelancer__status">Онлайн</div>
+                  <div class="profi__top-info">
+                    <div class="profi__info-bottom">
+                      <div class="service__body-left">
+                        <div class="service__body-bottom-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <g clip-path="url(#clip0_154_1959)">
+                              <path
+                                d="M6 10.5C6 10.5 7.125 12 9 12C10.875 12 12 10.5 12 10.5M11.25 6.75H11.2575M6.75 6.75H6.7575M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9ZM11.625 6.75C11.625 6.9571 11.4571 7.125 11.25 7.125C11.0429 7.125 10.875 6.9571 10.875 6.75C10.875 6.54289 11.0429 6.375 11.25 6.375C11.4571 6.375 11.625 6.54289 11.625 6.75ZM7.125 6.75C7.125 6.9571 6.9571 7.125 6.75 7.125C6.54289 7.125 6.375 6.9571 6.375 6.75C6.375 6.54289 6.54289 6.375 6.75 6.375C6.9571 6.375 7.125 6.54289 7.125 6.75Z"
+                                stroke="#38B000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_154_1959">
+                                <rect width="18" height="18" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <span>18</span>
+                        </div>
+                        <div class="service__body-bottom-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <g clip-path="url(#clip0_154_1965)">
+                              <path
+                                d="M6 11.25H12M11.25 6.75H11.2575M6.75 6.75H6.7575M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9ZM11.625 6.75C11.625 6.95711 11.4571 7.125 11.25 7.125C11.0429 7.125 10.875 6.95711 10.875 6.75C10.875 6.54289 11.0429 6.375 11.25 6.375C11.4571 6.375 11.625 6.54289 11.625 6.75ZM7.125 6.75C7.125 6.95711 6.95711 7.125 6.75 7.125C6.54289 7.125 6.375 6.95711 6.375 6.75C6.375 6.54289 6.54289 6.375 6.75 6.375C6.95711 6.375 7.125 6.54289 7.125 6.75Z"
+                                stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_154_1965">
+                                <rect width="18" height="18" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <span>02</span>
+                        </div>
+                        <div class="service__body-bottom-item">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                            fill="none">
+                            <g clip-path="url(#clip0_154_1971)">
+                              <path
+                                d="M12 12C12 12 10.875 10.5 9 10.5C7.125 10.5 6 12 6 12M12.75 6.93C12.4537 7.29375 12.0487 7.5 11.625 7.5C11.2013 7.5 10.8075 7.29375 10.5 6.93M7.5 6.93C7.20375 7.29375 6.79875 7.5 6.375 7.5C5.95125 7.5 5.5575 7.29375 5.25 6.93M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z"
+                                stroke="#DC2F02" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_154_1971">
+                                <rect width="18" height="18" fill="white" />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <span>10</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <button class="call__freelancer">Отправить личное сообщение</button>
+              </div>
+
+              <div class="white-block">
+                <div class="white-block-title">Поделиться услугой</div>
+                <div class="white-block__wrap">
+                  <a href="#" class="social-freelance-link">
+                    <img src="images/socials/facebook.png" alt="">
+
+                  </a>
+                  <a href="#" class="social-freelance-link">
+                    <img src="images/socials/vk.png" alt="">
+
+                  </a>
+                  <a href="#" class="social-freelance-link">
+                    <img src="images/socials/twitter.png" alt="">
+
+                  </a>
+                  <a href="#" class="social-freelance-link">
+                    <img src="images/socials/odnoklassniki.png" alt="">
+
+                  </a>
+                  <a href="#" class="social-freelance-link google-plus">
+                    <img src="images/socials/google-plus.png" alt="">
+
+                  </a>
+                </div>
+              </div>
+              <div class="white-block">
+
+                <div class="white-block__wrap">
+                  <a href="" class="teg">Графика</a>
+                  <a href="" class="teg">Веб-дизайн</a>
+                  <a href="" class="teg">На шаблоне</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section class="description">
+        <div class="container">
+          <h4 class="section__title">Описание услуги</h4>
+          <div class="text-block">
+            <p>
+              Если Вы&nbsp;читаете описание этого кворка, значит я&nbsp;отличный дизайнер и&nbsp;маркетолог.<br>
+              Ведь банер зацепил ваше внимание, а&nbsp;оффер закрыл боль и&nbsp;донес мои преимущества.<br>
+              На&nbsp;бирже 6000&nbsp;предложений, а&nbsp;вы&nbsp;тут. Читаете этот текст.<br>
+              Вот так это работает. Всегда. Без вариантов.<br>
+              Также я&nbsp;делаю для своих клиентов, ведь сайт нужен для того, чтобы продавать, а&nbsp;у&nbsp;вас
+              на&nbsp;этого всего 2
+              секунды.
+              Что&nbsp;же я&nbsp;делаю?<br>
+              Я&nbsp;создаю не&nbsp;просто красивую картинку, а&nbsp;использую <strong>дизайн для усиления
+                смыслов</strong>, которые
+              нацелены на
+              закрытие возражений ваших покупателей и&nbsp;раскрытии ваших конкурентных преимуществ.<br>
+              Читерство с&nbsp;покупкой рекламы в&nbsp;гугле закончилось. Единственный способ продвинуться&nbsp;&mdash;
+              это дать понять
+              роботам, что сайт у&nbsp;вас уникальный, не&nbsp;на&nbsp;шаблоне и&nbsp;самое главное&nbsp;&mdash;
+              интересен пользователям. Чем дольше
+              люди будут находится на&nbsp;сайте&nbsp;&mdash; тем быстрее робот поймет, что вы&nbsp;интересны.<br>
+              Поэтому вам нужен уникальный сайт от&nbsp;человека разбирающего в&nbsp;интернет-маркетинге.<br>
+              Уже более 600 заказчиков убедились в&nbsp;моем профессионализме.<br>
+              Не&nbsp;ждите, пока ваш конкурент обратится ко&nbsp;мне.<br>
+              У&nbsp;меня можно заказать: дизайн страницы сайта, лендинга, интернет-магазина, дизайн приложения под ключ
+              в
+              Figma
+              <br>
+              <br>
+              <strong>Нужно для заказа:</strong><br>
+              Вам необходимо предоставить:<br>
+              1. Подробное ТЗ&nbsp;/ прототип&nbsp;/ эскизы&nbsp;/ зарисовки страниц, блоков.<br>
+              2. Примеры понравившихся сайтов.<br>
+              3. Описать свои пожелания относительно дизайна.<br>
+              4. Предоставить необходимые материалы для сайта: логотип, бренд-бук, изображения (особенно, если ваш
+              продукт уникальный), тексты
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="varints">
+        <div class="container">
+          <h4 class="section__title">Варианты услуги</h4>
+          <div class="varints__body">
+            <div class="offer">
+              <div class="offer__top">
+                <span>Эконом</span>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <g clip-path="url(#clip0_102_3480)">
+                      <path
+                        d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z"
+                        stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_102_3480">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <i>7 дней</i>
+                </p>
+              </div>
+              <div class="offer__price">10 000₽</div>
+              <p class="offer__text">
+                Буквально пару строк об услуге, почему именно это вариант подойдет клиенту
+              </p>
+              <ul class="offer__list">
+                <li class="offer__list-item ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Исходник в psd</span>
+                </li>
+                <li class="offer__list-item ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Логотип</span>
+                </li>
+                <li class="offer__list-item ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Фавикон</span>
+                </li>
+              </ul>
+              <button class="offer__btn">Заказать</button>
+            </div>
+            <div class="offer">
+              <div class="offer__top">
+                <span>Стандарт</span>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <g clip-path="url(#clip0_102_3480)">
+                      <path
+                        d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z"
+                        stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_102_3480">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <i>7 дней</i>
+                </p>
+              </div>
+              <div class="offer__price">40 000₽</div>
+              <p class="offer__text">
+                Буквально пару строк об услуге, почему именно это вариант подойдет клиенту
+              </p>
+              <ul class="offer__list">
+                <li class="offer__list-item ">
+                  <svg class="green" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                    fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Исходник в psd</span>
+                </li>
+                <li class="offer__list-item ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Логотип</span>
+                </li>
+                <li class="offer__list-item ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Фавикон</span>
+                </li>
+                <li class="offer__list-item ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Фавикон</span>
+                </li>
+              </ul>
+              <button class="offer__btn">Заказать</button>
+            </div>
+            <div class="offer">
+              <div class="offer__top">
+                <span>Бизнес</span>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <g clip-path="url(#clip0_102_3480)">
+                      <path
+                        d="M9 4.5V9L12 10.5M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z"
+                        stroke="#121F3E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_102_3480">
+                        <rect width="18" height="18" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <i>7 дней</i>
+                </p>
+              </div>
+              <div class="offer__price">1 000 000₽</div>
+              <p class="offer__text">
+                Буквально пару строк об услуге, почему именно это вариант подойдет клиенту
+              </p>
+              <ul class="offer__list">
+                <li class="offer__list-item ">
+                  <svg class="green" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                    fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Исходник в psd</span>
+                </li>
+                <li class="offer__list-item ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M15 4.5L6.75 12.75L3 9" stroke="#121F3E" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  <span>Логотип</span>
+                </li>
+
+              </ul>
+              <button class="offer__btn">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="testimonials">
+        <div class="container">
+          <h4 class="section__title">Отзывы покупателей</h4>
+          <div class="testimonials__body pt0">
+            <div class="testimonials__column">
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+                  <div class="testimonial__author-response">
+                    <span>Ответ автора</span>
+                    <p class="testimonial__author-response-text">
+                      Благодарю за отзыв)) Я всегда стараюсь помочь, если что Вы знаете где меня найти.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+
+                </div>
+              </div>
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+                  <div class="testimonial__author-response">
+                    <span>Ответ автора</span>
+                    <p class="testimonial__author-response-text">
+                      Благодарю за отзыв)) Я всегда стараюсь помочь, если что Вы знаете где меня найти.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+
+                </div>
+              </div>
+            </div>
+            <div class="testimonials__column">
+
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+
+                </div>
+              </div>
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+                  <div class="testimonial__author-response">
+                    <span>Ответ автора</span>
+                    <p class="testimonial__author-response-text">
+                      Благодарю за отзыв)) Я всегда стараюсь помочь, если что Вы знаете где меня найти.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+
+                </div>
+              </div>
+              <div class="testimonials__item testimonial">
+                <div class="testimonial__top">
+                  <div class="testimonial__avatar">
+                    <img src="images/frelancer/avatar.jpg" alt="">
+                  </div>
+                  <div class="testimonial__name">Lena Leslava</div>
+                  <div class="testimonial__date">Два года назад</div>
+                  <div class="testimonial__rate">
+                    <img src="images/icons/face-smile.svg" alt="">
+                  </div>
+                </div>
+                <div class="testimonial__body">
+                  <p class="testimonial__text">
+                    Исполнитель просто сказочный человек, мало таких, установил все как и договаривались + в бонус
+                    подарил много модулей! Это прям подарок на новый год! Спасибо, обращайтесь не думая!
+                  </p>
+                  <div class="testimonial__author-response">
+                    <span>Ответ автора</span>
+                    <p class="testimonial__author-response-text">
+                      Благодарю за отзыв)) Я всегда стараюсь помочь, если что Вы знаете где меня найти.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="profi__more">Еще отзывы</button>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a href="#" class="footer__logo">
+            <img src="images/logo.png" alt="">
+          </a>
+          <div class="footer__descr">
+            <h6>
+              Quick-do.ru is a store of freelance services
+            </h6>
+            <p>
+              Working with us, you acquire not just a reliable partner, but a loyal friend.
+            </p>
+          </div>
+
+          <div class="footer__columns">
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  To the customer
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  To the freelancer
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  News
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  Question - answer
+                </a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  About
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  Rules of Service
+                </a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">
+                  Support
+                </a></li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="policy">
+            © 2023 Quick-do.ru
+          </p>
+          <div class="socials">
+            <a href="#" class="socials-item">
+              <img src="images/socials/logo-tiktok 1.svg" alt="">
+            </a>
+            <a href="#" class="socials-item">
+              <img src="images/socials/instagram-black 1.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
