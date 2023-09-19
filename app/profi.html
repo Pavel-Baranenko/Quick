@@ -824,7 +824,78 @@
       </div>
     </footer>
   </div>
+  <div class="profi__popup">
+    <form class="profi__popup-wrapper">
+      <div class="profi__popup-head">
+        <div class="profi__popup-title">Написать сообщение</div>
+        <button class="profi__popup-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <g clip-path="url(#clip0_201_3104)">
+              <path opacity="0.12"
+                d="M32.0553 32.4281C37.2622 27.2211 37.2622 18.7789 32.0553 13.5719C26.8483 8.36492 18.406 8.36496 13.1991 13.5719C7.99209 18.7789 7.99209 27.2211 13.1991 32.4281C18.406 37.635 26.8483 37.6351 32.0553 32.4281Z"
+                fill="#96A0B5" />
+              <path
+                d="M18.8559 19.2288L26.3984 26.7712M18.8559 26.7712L26.3984 19.2288M32.0553 13.5719C37.2622 18.7789 37.2622 27.2211 32.0553 32.4281C26.8483 37.6351 18.406 37.635 13.1991 32.4281C7.99209 27.2211 7.99209 18.7789 13.1991 13.5719C18.406 8.36496 26.8483 8.36492 32.0553 13.5719Z"
+                stroke="#96A0B5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_201_3104">
+                <rect width="32" height="32" fill="white" transform="translate(0 23) rotate(-45)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+      <div class="profi__popup-message">
+        <span>Текст сообщения</span>
+        <textarea class="profi__popup-textarea"
+          placeholder="В свободной форме, но не забывайте о законодательстве!"></textarea>
+      </div>
+      <div class="profi__popup-file">
+        <input type="file" class="profi__popup-file-btn">
+        <span>Разрешено до 10 файлов, до 4Мб каждый</span>
+      </div>
+      <div class="profi__popup-title">Предложить заказ</div>
+      <p class="profi__popup-text">
+        Вы&nbsp;можете отправить индивидуальный заказ исполнителю.<br>Если заказ не&nbsp;требуется&nbsp;&mdash;
+        не&nbsp;заполняйте предложение ниже
+      </p>
+      <div class="profi__popup-options">
+        <div class="profi__popup-options-input">
+          <span>Бюджет</span>
+          <input type="number">
+        </div>
+        <div class="profi__popup-options-input">
+          <span>Срок исполнения</span>
+          <input type="number">
+        </div>
+      </div>
+      <button class="profi__popup-btn blue-btn" type="submit">
+        Отправить
+      </button>
+    </form>
+  </div>
   <script src="js/main.min.js"></script>
+  <script>
+    const drop = document.querySelectorAll('.variations-item');
+
+    drop.forEach((el) => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('active');
+      })
+    })
+
+    const callBtn = document.querySelector('.text-profi');
+    const popup = document.querySelector('.profi__popup');
+    const cloose = document.querySelector('.profi__popup-close');
+    callBtn.addEventListener('click', () => {
+      popup.classList.add('active');
+    })
+    cloose.addEventListener('click', () => {
+      popup.classList.remove('active');
+
+    })
+  </script>
 </body>
 
 </html>

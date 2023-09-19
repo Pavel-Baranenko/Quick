@@ -25,10 +25,3 @@ const swiper1 = new Swiper('.swiper-offer', {
 });
 
 
-const drop = document.querySelectorAll('.variations-item');
-
-drop.forEach((el) => {
-  el.addEventListener('click', () => {
-    el.classList.toggle('active');
-  })
-})
